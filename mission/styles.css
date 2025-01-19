@@ -1,0 +1,57 @@
+/* General Styles */
+body {
+    font-family: "Times New Roman", serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+header, footer {
+    text-align: center;
+}
+
+header h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 28px;
+}
+
+header h2 {
+    color: #006EB6;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 22px;
+}
+
+main {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+footer img {
+    width: 150px;
+    margin-top: 20px;
+}
+
+.theme-selector {
+    text-align: center;
+    margin: 10px;
+}
+
+/* Dark Theme */
+body.dark {
+    background-color: #333;
+    color: white;
+}
+
+body.dark header h2 {
+    color: #B0D6F7;
+}
+
+body.dark footer img {
+    content: url("byui.png");
+}
