@@ -19,8 +19,18 @@ function viewerTemplate(path, alt) {
 // Function to handle image click and show the viewer
 function viewHandler(event) {
     const clickedElement = event.target;
-    const src = clickedElement.src.split('-')[0];
-    const newSrc = `${src}-full.jpeg`;
+
+    // Get the original image source
+    const src = clickedElement.src;
+
+    // Extract the base file name without the size suffix
+    const srcParts = src.split('/');
+    const fileName = srcParts.pop(); // Get the file name (e.g., 'image-small.jpeg')
+    const baseName = fileName.split('-')[0]; // Get the base name (e.g., 'image')
+
+    // Construct the new source path
+    const newSrc = `${srcParts.join('/')}/${baseName}-full.jpeg`;
+
     const alt = clickedElement.alt;
     const viewerHTML = viewerTemplate(newSrc, alt);
     document.body.insertAdjacentHTML("afterbegin", viewerHTML);
