@@ -1,0 +1,310 @@
+/* if you are using any Google fonts change the font names below to your fonts. 
+Any spaces in your font name should be replaced with a +. 
+Fonts are separated by a & */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #B2DDF7   ;
+  --secondary-color: #F1C8DB ;
+  --accent1-color: #272923;
+  --accent2-color: #6F6866;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "IBM Plex Mono";
+  --paragraph-font: 'Roboto Slab', serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: #B2DDF7;  /* headlines on a white background */ 
+  --headline-color-on-color: #F1C8DB; /* headlines on a colored background */ 
+  --paragraph-color-on-white: #272923; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: #6F6866; /* paragraph text on a colored background */ 
+  --paragraph-background-color:  #B2DDF7 ;
+  --nav-link-color: #F1C8DB;
+  --nav-background-color: #272923;
+  --nav-hover-link-color: #F1C8DB;
+  --nav-hover-background-color: #B2DDF7;
+}
+
+
+body {
+  max-width: 100% auto;
+  margin: 0 auto;
+  padding: 0em;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+}
+h2 {
+  text-align: center;
+}
+hr {
+  height: 3px;
+  margin: 35px 0;
+  background: var(--accent1-color);
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 0.5em;
+  text-align: center;
+  color:#6F6866;
+  background-color: var(--paragraph-background-color);
+  width: 100%;
+  margin-bottom: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+}
+
+.header-content {
+  display: grid;
+  grid-template-columns: 150px auto;
+  align-items: center;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 3em;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2em;
+  list-style-type: none;
+}
+
+nav a {
+  padding: 10px;
+  min-width: 120px;
+  text-decoration: none;
+  color:aqua;
+  margin-right: 120px;
+}
+
+nav a:link, nav a:visited {
+  color: black;
+}
+
+.logo {
+  width: 80px;
+}
+.logo-right{
+  width: 80px;
+  border-radius: 100%;
+  float: right;
+}
+nav a:hover {
+  color: white;
+  background-color: skyblue;
+}
+
+.teton-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.teton-text, .teton-text1 {
+  flex: 1;
+  max-width: 50%;
+  margin-right: 20px;
+}
+
+.teton-img {
+  flex: 1;
+  max-width: 50%;
+  margin-left: 20px;
+  border: 10px solid azure;
+  transition: transform .5s;
+  box-shadow: 5px 5px 10px #6f7364;
+  animation: slideIn 2s;
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+footer{
+  background-color:#F1C8DB;
+  color: black;
+  padding: 25px 50px;
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+}
+
+  .social {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-icon {
+    width: 70px;
+    margin-left: 10px;
+}
+header > h1, header > h2 {
+  color: var(--headline-color-on-color);
+}
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  padding: 1em;
+}
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 30px auto;
+  text-align: center;
+}
+.colors th {
+  background-color: #999;
+}
+.colors td{
+  width: 25%;
+  height: 3em;
+}
+.primary {
+  background-color: var(--primary-color);
+}
+.secondary {
+  background-color: var(--secondary-color);
+}
+.accent1 {
+  background-color: var(--accent1-color);
+}
+.accent2{
+  background-color: var(--accent2-color);
+}
+p.colored {
+  background-color: var(--paragraph-background-color);
+  color: var(--paragraph-color-on-color);
+}
+/* nav a {
+  padding: 10px;
+  min-width: 120px;
+  text-decoration: none;
+  color:aqua;
+  margin-right: 120px;
+}
+
+nav a:link, nav a:visited {
+  color: black;
+}
+.logo{
+  width: 80px;
+}*/
+/*
+nav a:hover {
+  color: white;
+  background-color: skyblue;
+}
+*/   
+.sitemap {
+  display: grid;
+  justify-content: center;
+
+  grid-template-columns: repeat(6, 15%);
+  grid-template-rows: 3em 1.5em 1.5em 3em;
+  grid-template-areas: ". . home home . ."
+    ". . . top . ."
+    ". left left right right ."
+    "page2 page2 . . page3 page3";
+}
+.sitemap > div {
+  text-align: center;
+}
+.sm-home {
+  grid-area: home;
+  background-color: #ccc;
+  line-height: 3em;
+}
+.sm-page2 {
+  grid-area: page2;
+  background-color: #ccc;
+  line-height: 3em;
+}
+.sm-page3 {
+  grid-area: page3;
+  background-color: #ccc;
+  line-height: 3em;
+}
+.top {
+  grid-area: top;
+  border-left: 1px solid;
+}
+.left {
+  grid-area: left;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+.right {
+  grid-area: right;
+  border-top: 1px solid;
+  border-right: 1px solid;
+}
+
+@media screen and (max-width: 900px) {
+  #hero, .home-grid {
+      display: block;
+      height: auto;
+  }
+  nav, footer {
+      flex-direction: column;
+  }
+  nav a {
+      display: block;
+      padding: 15px;
+  }
+  #hero {
+      margin-top: 0;
+  }
+  #hero-msg {
+      margin-top: 0;
+  }
+  #hero-msg h4 {
+      display: none;
+  }
+  .home-title {
+      font-size: 25px;
+      color: #6f7364;
+  }
+  .rivers-card, .camping-card, .rapids-card { 
+      margin: 50px auto;
+      width: 60%;
+  }
+  #background {
+      display: none;
+  }
+  .mountains, .msg {
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+  }
+  footer {
+      margin-top: 25px;
+  }
+}
